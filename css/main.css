@@ -1,0 +1,224 @@
+:root{
+    --orange: #fdc42d;
+    --black: #1e1307;
+    --grey: #262626f5 ;
+    --white: #f3f3f3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Salsa', cursive;
+}
+
+a {
+    text-decoration: none;
+}
+ 
+p {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 8px;
+}
+
+.produto p {
+    border-top: 1px solid var(--white);
+}
+
+main h2 {
+    margin-top: 8px;
+}
+
+body {
+    background-color:var(--orange);
+}
+
+img {
+    width: 100%;
+}
+
+.box {
+    padding: 16px 24px;
+}
+
+.display-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ---> MOBILE */
+/* HEADER */
+
+
+.container {
+    padding: 0 32px;    
+    width: 100%;
+}
+
+header a {
+    color: var(--black);
+}
+
+header h1{
+    background-color: var(--black);
+    color: var(--orange);
+    width: 42%;
+    font-size: 24px;
+    padding: 8px 16px ;
+    margin-bottom: 32px;
+}
+
+header ul {
+    list-style: none;
+    margin-top: 16px;
+}
+
+/* MAIN */
+
+main {
+    background-color: var(--grey);
+    color: var(--white);
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+hr {
+    width: 50%;
+    border:1px solid var(--orange);
+    margin-bottom: 16px;
+}
+
+main h2 {
+    padding-left: 24px;
+}
+
+#produtos .produto h2 {
+    padding: 8px 0 8px 8px;
+}
+
+
+hr {
+    margin-left: 24px;
+}
+
+main button {
+    background-color: var(--orange);
+    padding: 8px;
+    display: block;
+    margin: 16px auto;
+    border:none;
+    border-radius:10px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    font-size: 14px;
+    margin: 16px auto;
+    padding: 32px 64px;
+    border-top: 1px solid var(--grey);
+}
+
+footer > div {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+footer img {
+    max-width: 24px;
+    margin: 16px 4px 0 4px;
+}
+
+/* -----> TABLET */
+
+@media screen and (min-width:641px) and (max-width:1023px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    header h1{
+        background-color: var(--black);
+        color: var(--orange);
+        width: 32%;
+        font-size: 30px;
+        padding: 8px 16px ;
+        margin-bottom: 32px;
+    }
+
+    header ul{
+        padding-top: 18px;
+    }
+   
+    #produtos {
+        display: grid;
+        grid-template-columns: repeat(2,49%);
+        grid-column-gap: 2%;
+    }
+
+    #produtos > hr {
+        margin: 40px 0;
+        display: block;
+        border: 1px solid red;
+    }
+    
+    
+    .produto h2 {
+        height: 80px;
+    }
+    
+    .produto p {
+        height: 50px;
+        margin-bottom: 40px;
+    }
+    
+    .botao {
+        margin: 0 auto;
+    }
+}
+
+/*  --->  DESKTOP  */
+
+@media screen and (min-width:1024px) {
+    .container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    header h1 {
+        text-align: center;
+        padding: 16px 0;
+        width: 20%;
+    }
+
+    header ul li {
+        display: inline-block;
+        padding-top: 16px;
+    }
+
+    #produtos {
+        display: grid;
+        grid-template-columns: repeat(4, 23.5%);
+        grid-column-gap: 2%;
+    }
+
+    .produto h2 {
+        font-size: 20px;
+        height: 64px;
+    }
+
+    .produto p {
+        height: 64px;
+      
+    }
+
+    main {
+        padding-bottom: 40px;
+    }
+
+
+
+}
